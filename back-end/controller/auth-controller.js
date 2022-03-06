@@ -87,14 +87,113 @@ class AuthController {
 				activated: false,
 			});
 
+		await tokenService.storeRefreshToken(
+			user._id,
+			refreshToken
+		);
+
 		res.cookie("refreshToken", refreshToken, {
+			maxAge: 1000 * 60 * 60 * 24 * 30,
+			httpOnly: true,
+		});
+
+		res.cookie("accessToken", accessToken, {
 			maxAge: 1000 * 60 * 60 * 24 * 30,
 			httpOnly: true,
 		});
 
 		const userdto = new UserDto(user);
 		res.json({
-			accessToken,
+			auth: true,
+			user: userdto,
+		});
+	}
+
+	async refresh(req, res) {
+		// get refresh token from cookie
+		const { refreshToken: prevRefreshToken } = req.cookies;
+		if (!prevRefreshToken) {
+			res.status(400).json({
+				message: "Refresh token is required",
+			});
+			return;
+		}
+
+		// check validity of refresh token
+		const user = await tokenService.verifyRefreshToken(
+			prevRefreshToken
+		);
+
+		if (!user) {
+			res.status(401).json({
+				message: "Refresh token is invalid",
+			});
+			return;
+		}
+
+		// verfiy whether refresh token is present in db
+		try {
+			const isRefreshTokenPresent =
+				await tokenService.findToken({
+					token: prevRefreshToken,
+					userId: user._id,
+				});
+
+			if (!isRefreshTokenPresent) {
+				res.status(500).json({
+					message: "internal error",
+				});
+				return;
+			}
+		} catch (e) {
+			res.status(401).json({
+				message: "Refresh token is expired " + e.message,
+			});
+		}
+
+		//checking user is present in db
+		const mUser = await userService.findUser({
+			_id: user._id,
+		});
+		if (!mUser) {
+			res.status(500).json({
+				message: "internal error",
+			});
+			return;
+		}
+
+		// generate new access token
+		const { accessToken, refreshToken } =
+			tokenService.generateTokens({
+				_id: user._id,
+			});
+
+		try {
+			// update refresh token in db
+			await tokenService.updateRefreshToken(
+				user._id,
+				refreshToken
+			);
+		} catch (e) {
+			res.status(500).json({
+				message: "internal error while updating token",
+			});
+			return;
+		}
+
+		res.cookie("refreshToken", refreshToken, {
+			maxAge: 1000 * 60 * 60 * 24 * 30,
+			httpOnly: true,
+		});
+
+		res.cookie("accessToken", accessToken, {
+			maxAge: 1000 * 60 * 60 * 24 * 30,
+			httpOnly: true,
+		});
+
+		const userdto = new UserDto(mUser);
+		res.json({
+			auth: true,
 			user: userdto,
 		});
 	}
