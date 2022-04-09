@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACL,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,OAAO;EACnB,aAAa,EAAE,OAAO;EACtB,KAAK,EAAE,OAAO;EACd,OAAO,EAAE,YAAY;EACrB,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,OAAO;EAClB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,mBAAmB;CAChC",
+    "sources": [
+        "TextBox.module.scss"
+    ],
+    "names": [],
+    "file": "TextBox.module.css"
+}

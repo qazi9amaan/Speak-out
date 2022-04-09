@@ -1,0 +1,83 @@
+.profileImage {
+  width: 53px !important;
+  height: 53px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border: 3px solid #31517e;
+}
+.roomDetailsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.roomDetails {
+  margin-left: 15px;
+}
+
+.roomDetails h3 {
+  width: 85%;
+  font-size: 1.4rem;
+  color: #143764fb;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.roomDetails p {
+  margin-top: 0.3em;
+  font-size: 1.11rem;
+  color: #5e789be3;
+  font-weight: 400;
+  opacity: 0.7;
+}
+.backIcon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  color: #143764fb;
+}
+
+.backIcon:hover {
+  opacity: 0.6;
+}
+
+.nav {
+  padding: 1.7em 2.6em;
+  border-bottom: 1px solid #e6e6e6ab !important;
+}
+
+.actionsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.micIcon {
+  cursor: pointer;
+  margin-right: 1em;
+  font-size: 2rem;
+  color: #31517e;
+}
+
+.micIcon:hover {
+  opacity: 0.6;
+}
+
+.iconbadge {
+  cursor: pointer;
+
+  border-radius: 2rem;
+  background-color: #31517e;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 0.68em 1.3em;
+  margin-right: 1em;
+  opacity: 0.9;
+}
+.iconbadge:hover {
+  opacity: 1;
+}

@@ -1,0 +1,14 @@
+.input {
+  margin-left: 0.25em;
+  background: #f2f6ff;
+  border-radius: 0.65rem;
+  color: #43618a;
+  padding: 0.4em 0.55em;
+  font-weight: 700;
+  font-size: 1.55rem;
+  border: none;
+  width: 100%;
+  outline: none;
+  font-family: "Roboto" sans-serif;
+}
+/*# sourceMappingURL=TextBox.module.css.map */

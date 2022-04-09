@@ -1,0 +1,153 @@
+.cardWrapper {
+  margin-top: 2em;
+  flex-shrink: 0;
+  position: relative;
+  height: 70vh;
+  width: 28%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.backgroundCircleArt {
+  position: absolute;
+  left: -20;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  width: 100%;
+}
+
+.firstSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: 100%;
+  padding: 0 2.5em;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  width: 25em;
+  height: 550px;
+  z-index: 2;
+  background: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+}
+
+.speakerSectionheader {
+  font-size: 1.25rem;
+  color: #5e789be5;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+.speakerSection {
+  width: 90%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.speakerSectionWrapper {
+  padding-top: 2em;
+
+  width: 70%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 34em;
+  overflow-y: scroll;
+  padding-bottom: 2em;
+}
+
+.cardBody {
+  overflow-y: auto;
+  height: 80%;
+  padding: 1.4em 1.3em;
+}
+
+.messageWrapper {
+  margin-bottom: 1.2em;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.messageWrapper img {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  margin-right: 0.4em;
+}
+
+.messageWrapper p {
+  font-size: 0.96rem;
+  line-height: 1.2;
+  color: #5a5e63;
+  opacity: 0.8;
+  font-weight: normal;
+  margin-left: 0.4em;
+}
+
+.sendMessageInputWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 1.3rem;
+  width: 86%;
+  padding: 1em 1em;
+  background: #f2f6ffcb;
+  margin: 8px;
+}
+.sendMessageInputWrapper textarea {
+  width: 100%;
+  border: none;
+  padding: 0.5em;
+  font-size: 0.9rem;
+  color: #5e789b;
+  background: transparent;
+  height: 100%;
+  resize: none;
+  position: relative;
+  /* hide scroll bar */
+  overflow: hidden;
+  outline: none;
+}
+.sendMessageInputWrapper textarea::placeholder {
+  color: #5e789b;
+  opacity: 0.5;
+}
+
+.raisehand {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 1.6rem;
+  padding: 0.6em 1.2em;
+  margin-right: -1em;
+  background: #51cb84;
+  color: white;
+  margin-bottom: -1em;
+  font-size: 1.1rem;
+}
+
+.raisehand:hover {
+  background: #07bd52;
+  cursor: pointer;
+}
+
+.speakerSectionWrapper::-webkit-scrollbar {
+  width: 1em;
+}

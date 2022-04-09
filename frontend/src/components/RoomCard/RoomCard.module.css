@@ -1,0 +1,48 @@
+.roomItemHolder {
+  flex-basis: content;
+  cursor: pointer;
+  min-width: 30ch;
+  max-width: 30ch;
+  padding: 0.8em 1.9em;
+  background: white;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  transition: all 0.3s ease-in-out;
+  margin: 0.5em;
+}
+.roomItemHolder:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+.roomtitle {
+  margin-top: 0.6em;
+  font-size: 1.19rem;
+  color: #243e63da;
+  font-weight: 400;
+}
+
+.roombody {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.roombody span {
+  font-size: 1rem;
+  color: #5e789b70;
+  font-weight: 100;
+}
+.roombody img {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ffffff;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #f2f6ff;
+  border-radius: 50%;
+}
+.imageback {
+  margin-left: -18px;
+}

@@ -1,0 +1,14 @@
+.card {
+  width: 25em;
+  position: absolute;
+  z-index: 2;
+  background: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+}
+
+.cardBody {
+  padding: 2.9rem 3.5em;
+}
+/*# sourceMappingURL=Card.module.css.map */

@@ -1,0 +1,75 @@
+main {
+  margin: 0 auto;
+  width: 95% !important;
+  margin-bottom: 15em;
+}
+.hero {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.cardWrapper {
+  flex-shrink: 0;
+  position: relative;
+  height: 80vh;
+  width: 46%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.herotext {
+  margin-top: 2em;
+  flex-grow: 1;
+}
+.backgroundCircleArt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.textHeader {
+  font-size: 1.65rem;
+  color: #31517e;
+  font-weight: 600;
+  margin-bottom: 10rem;
+}
+.textHeaderLight {
+  font-size: 3rem;
+  color: #31517e;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+.textSubheader {
+  margin-top: 0.8em;
+  width: 70%;
+  font-size: 0.9rem;
+  color: #5e789be3;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+.textSubheaderLight {
+  width: 90%;
+  font-size: 1.2rem;
+  color: #869ab6;
+  font-weight: 300;
+  opacity: 0.75;
+  width: 50%;
+}
+
+.RoomsHoler {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2em;
+}
+/*# sourceMappingURL=Rooms.module.css.map */

@@ -1,0 +1,18 @@
+.btn {
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #267fff;
+  border: none;
+  border-radius: 1.95rem;
+  padding: 0.95em 1.65em;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+  font-family: "Roboto" sans-serif;
+}
+
+.btn:hover {
+  background: #3a73c4;
+}
+/*# sourceMappingURL=Button.module.css.map */
