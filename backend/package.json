@@ -1,0 +1,27 @@
+{
+	"dependencies": {
+		"cookie-parser": "^1.4.6",
+		"cors": "^2.8.5",
+		"crypto": "^1.0.1",
+		"dotenv": "^16.0.0",
+		"express": "^4.17.2",
+		"jimp": "^0.16.1",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^6.2.1",
+		"socket.io": "^4.4.1",
+		"twilio": "^3.74.0"
+	},
+	"name": "back-end",
+	"version": "1.0.0",
+	"main": "index.js",
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	},
+	"scripts": {
+		"start": "nodemon server.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": ""
+}
